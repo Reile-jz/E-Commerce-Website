@@ -414,7 +414,6 @@ nav {
         font-size: 18px;
     }
 
-    @media (max-width: 600px) {
     .feature {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 32px 20px;
@@ -424,7 +423,6 @@ nav {
     .featureDescription {
         font-size: 14px;
     }
-}
 }
 
 
@@ -455,15 +453,19 @@ nav {
 }
 
 .featureTitle {
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .featureDescription {
     font-size: 19px;
-    font-weight: 600;
-    margin-top: 8px;
+    font-weight: 400;
+    margin-top: 6px;
+    width: 100%;
+    max-width: 200px;
     height: 100px;
+    color:gray;
+    text-align: center;
 }
 
 .product {
@@ -588,3 +590,4 @@ background-color: black;
     background-color:white;
     color:black;
 }
+
