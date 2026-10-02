@@ -455,29 +455,136 @@ nav {
 }
 
 .featureTitle {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
 }
 
 .featureDescription {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 8px;
     height: 100px;
 }
 
 .product {
-    height:100vh;
+    margin-top: -110px;
+    height: auto;
+    min-height: 100vh;
     background-color: whitesmoke;
     position:relative;
-    clip-path: polygon(100% 7%, 100% 61%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 0);
-    top: -40px;
-
+    overflow: clip;
+    clip-path: polygon(100% 10%, 100% 61%, 100% 60%, 100% 100%, 0 100%, 0% 60%, 0 17%);
 }
 
 .productImg {
-    zoom: 0.5;
-    left: -20vw;
-    top: 20px;
+    width: 55%;
+    position: relative;
+    left: -3vw;
+    top: 40px;
 
+}
+
+.productDescription {
+    position: static;
+    width: auto;
+    padding: 0;
+}
+
+.productDetails {
+    position: absolute;
+    top: auto;
+    bottom: calc(37% + 30px);
+    right: 7%;
+    width: 40%;
+    height: max-content;
+}
+
+.productTitle {
+    position: relative;
+    font-size: 75px;
+    font-weight: 900;
+    transform: scale(0.9);
+    left: 10%;
+}
+
+.productPrice {
+    position: relative;
+    right: auto;
+    left: 15%;
+}
+
+.productDescription {
+    position: relative;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 0;
+    height: auto;
+    color: grey;
+    left: 15%;
+}
+
+.colors {
+    display: flex;
+    position: absolute;
+    top: 63%;
+    left: 60%;
+    margin-bottom: 20px;
+
+}
+
+.sizes {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 71%;
+    left: 60%;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.color{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+}   
+.color:last-child {
+    background-color: darkred;
+}
+
+.productButton {
+    position: absolute;
+    top: 82%;
+    left: 80%;
+}
+
+.size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 26px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 1%;
+}
+
+
+.productButton:hover {
+    background-color:white;
+    color:black;
 }
