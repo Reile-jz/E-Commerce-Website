@@ -112,6 +112,7 @@ const currentProductTitle = document.querySelector(".productTitle")
 const currentProductPrice = document.querySelector(".productPrice")
 const currentProductDescription = document.querySelector(".productDescription")
 const currentProductColors = document.querySelectorAll(".color")
+const currentProductSizes = document.querySelectorAll(".size")
 
 function updateProductDetails(product) {
   currentProductTitle.textContent = product.title
@@ -119,6 +120,7 @@ function updateProductDetails(product) {
   currentProductDescription.textContent = product.description
   currentProductImg.src = product.colors[0].img
   currentProductImg.alt = product.title
+  
 
   currentProductColors.forEach((colorElement, index) => {
     const productColor = product.colors[index]
@@ -147,4 +149,26 @@ menuItems.forEach((item, index) => {
 
  
 
+currentProductSizes.forEach((size) => {
+  size.addEventListener("click", () => {
+    currentProductSizes.forEach(size=>{
+    size.style.backgroundColor = "white"
+    size.style.color = "black" 
+    })
+    size.style.backgroundColor = "black"
+    size.style.color = "white"
+  })
+})
 
+const productButton = document.querySelector(".productButton");
+const payment = document.querySelector(".payment");
+const close = document.querySelector(".close");
+
+
+productButton.addEventListener("click",()=>{
+    payment.style.display="flex"
+})
+
+close.addEventListener("click",()=>{
+    payment.style.display="none"
+})
