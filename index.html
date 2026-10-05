@@ -195,6 +195,131 @@
                 <img src="./gallery/5.png" alt="" class="nsImg">
             </div>
         </div>
+        <section class="aboutSection" id="about">
+            <div class="aboutWrap">
+                <div class="aboutText">
+                    <p class="eyebrow">About our company</p>
+                    <h2>Built for athletes, style lovers, and everyday movers.</h2>
+                    <p>Terra Strides is a modern sneaker brand dedicated to performance, comfort, and standout design. We combine premium materials, advanced cushioning, and bold street-ready aesthetics to create footwear that helps people move confidently in every moment.</p>
+                    <p>From basketball essentials to everyday lifestyle pairs, our mission is to deliver quality shoes and reliable service for every kind of customer.</p>
+                </div>
+                <div class="aboutStats">
+                    <div>
+                        <strong>10K+</strong>
+                        <span>Happy customers</span>
+                    </div>
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Average rating</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Support team</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicesSection" id="services">
+            <div class="sectionHeader">
+                <p class="eyebrow">Products & Services</p>
+                <h2>Everything you need to step forward.</h2>
+            </div>
+            <div class="serviceGrid">
+                <article class="serviceCard">
+                    <h3>Performance Sneakers</h3>
+                    <p>Top-tier basketball and street shoes engineered for comfort, traction, and support.</p>
+                </article>
+                <article class="serviceCard">
+                    <h3>Custom Fit Advice</h3>
+                    <p>Our team helps you find the right silhouette, size, and style for your daily needs.</p>
+                </article>
+                <article class="serviceCard">
+                    <h3>Fast Delivery</h3>
+                    <p>Quick shipping options with secure packaging so your order arrives in perfect condition.</p>
+                </article>
+                <article class="serviceCard">
+                    <h3>After-Sales Support</h3>
+                    <p>Easy exchanges, product guidance, and responsive customer service for every buyer.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="authSection" id="account">
+            <div class="authCard">
+                <h3>Sign In</h3>
+                <form id="signinForm" novalidate>
+                    <label for="signinEmail">Email</label>
+                    <input type="email" id="signinEmail" name="signinEmail" placeholder="you@example.com" required>
+                    <small class="error-message" data-for="signinEmail"></small>
+
+                    <label for="signinPassword">Password</label>
+                    <input type="password" id="signinPassword" name="signinPassword" placeholder="Enter your password" required>
+                    <small class="error-message" data-for="signinPassword"></small>
+
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+
+            <div class="authCard">
+                <h3>Sign Up</h3>
+                <form id="signupForm" novalidate>
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" name="signupName" placeholder="John Doe" required>
+                    <small class="error-message" data-for="signupName"></small>
+
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="signupEmail" placeholder="you@example.com" required>
+                    <small class="error-message" data-for="signupEmail"></small>
+
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="signupPassword" placeholder="Minimum 6 characters" required>
+                    <small class="error-message" data-for="signupPassword"></small>
+
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" placeholder="Re-enter password" required>
+                    <small class="error-message" data-for="signupConfirmPassword"></small>
+
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="inquirySection" id="inquiry">
+            <div class="inquiryWrap">
+                <div class="inquiryText">
+                    <p class="eyebrow">Need help?</p>
+                    <h2>Send us an inquiry</h2>
+                    <p>Have questions about sizing, delivery, or a product recommendation? Our team is ready to help.</p>
+                </div>
+
+                <form id="inquiryForm" novalidate>
+                    <div class="fieldRow">
+                        <div>
+                            <label for="inquiryName">Name</label>
+                            <input type="text" id="inquiryName" name="inquiryName" placeholder="Your name" required>
+                            <small class="error-message" data-for="inquiryName"></small>
+                        </div>
+                        <div>
+                            <label for="inquiryEmail">Email</label>
+                            <input type="email" id="inquiryEmail" name="inquiryEmail" placeholder="your@email.com" required>
+                            <small class="error-message" data-for="inquiryEmail"></small>
+                        </div>
+                    </div>
+
+                    <label for="inquirySubject">Subject</label>
+                    <input type="text" id="inquirySubject" name="inquirySubject" placeholder="Question about an order" required>
+                    <small class="error-message" data-for="inquirySubject"></small>
+
+                    <label for="inquiryMessage">Message</label>
+                    <textarea id="inquiryMessage" name="inquiryMessage" rows="5" placeholder="Tell us how we can help..." required></textarea>
+                    <small class="error-message" data-for="inquiryMessage"></small>
+
+                    <button type="submit">Send Inquiry</button>
+                </form>
+            </div>
+        </section>
+
         <footer class="siteFooter">
             <div class="footerInner">
                 <div class="footerMain">
@@ -202,6 +327,8 @@
                     <nav class="footerNav" aria-label="Footer navigation">
                         <a href="#nav">Shop</a>
                         <a href="#product">Featured Shoe</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
                     </nav>
                     <nav class="footerSocial" aria-label="Social media">
                         <a href="https://www.instagram.com/terrastrides/" target="_blank" rel="noopener noreferrer">Instagram: @terrastrides</a>

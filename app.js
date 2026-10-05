@@ -172,3 +172,166 @@ productButton.addEventListener("click",()=>{
 close.addEventListener("click",()=>{
     payment.style.display="none"
 })
+
+function validateEmail(value) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(value.trim());
+}
+
+function setFieldError(fieldId, message) {
+  const field = document.getElementById(fieldId);
+  const error = document.querySelector(`[data-for="${fieldId}"]`);
+
+  if (field) {
+    field.setAttribute("aria-invalid", message ? "true" : "false");
+    field.style.borderColor = message ? "#d93025" : "";
+    field.style.boxShadow = message ? "0 0 0 1px rgba(217,48,37,0.15)" : "";
+  }
+
+  if (error) {
+    error.textContent = message || "";
+  }
+}
+
+const signinForm = document.getElementById("signinForm");
+if (signinForm) {
+  signinForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const emailValue = document.getElementById("signinEmail").value;
+    const passwordValue = document.getElementById("signinPassword").value;
+
+    let valid = true;
+
+    if (!emailValue.trim()) {
+      setFieldError("signinEmail", "Email is required.");
+      valid = false;
+    } else if (!validateEmail(emailValue)) {
+      setFieldError("signinEmail", "Please enter a valid email address.");
+      valid = false;
+    } else {
+      setFieldError("signinEmail", "");
+    }
+
+    if (!passwordValue.trim()) {
+      setFieldError("signinPassword", "Password is required.");
+      valid = false;
+    } else if (passwordValue.length < 6) {
+      setFieldError("signinPassword", "Password must be at least 6 characters long.");
+      valid = false;
+    } else {
+      setFieldError("signinPassword", "");
+    }
+
+    if (valid) {
+      alert("Sign in successful!");
+      signinForm.reset();
+    }
+  });
+}
+
+const signupForm = document.getElementById("signupForm");
+if (signupForm) {
+  signupForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameValue = document.getElementById("signupName").value.trim();
+    const emailValue = document.getElementById("signupEmail").value.trim();
+    const passwordValue = document.getElementById("signupPassword").value;
+    const confirmPasswordValue = document.getElementById("signupConfirmPassword").value;
+
+    let valid = true;
+
+    if (!nameValue) {
+      setFieldError("signupName", "Full name is required.");
+      valid = false;
+    } else {
+      setFieldError("signupName", "");
+    }
+
+    if (!emailValue) {
+      setFieldError("signupEmail", "Email is required.");
+      valid = false;
+    } else if (!validateEmail(emailValue)) {
+      setFieldError("signupEmail", "Please enter a valid email address.");
+      valid = false;
+    } else {
+      setFieldError("signupEmail", "");
+    }
+
+    if (!passwordValue) {
+      setFieldError("signupPassword", "Password is required.");
+      valid = false;
+    } else if (passwordValue.length < 6) {
+      setFieldError("signupPassword", "Password must be at least 6 characters long.");
+      valid = false;
+    } else {
+      setFieldError("signupPassword", "");
+    }
+
+    if (!confirmPasswordValue) {
+      setFieldError("signupConfirmPassword", "Please confirm your password.");
+      valid = false;
+    } else if (confirmPasswordValue !== passwordValue) {
+      setFieldError("signupConfirmPassword", "Passwords do not match.");
+      valid = false;
+    } else {
+      setFieldError("signupConfirmPassword", "");
+    }
+
+    if (valid) {
+      alert("Account created successfully!");
+      signupForm.reset();
+    }
+  });
+}
+
+const inquiryForm = document.getElementById("inquiryForm");
+if (inquiryForm) {
+  inquiryForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameValue = document.getElementById("inquiryName").value.trim();
+    const emailValue = document.getElementById("inquiryEmail").value.trim();
+    const subjectValue = document.getElementById("inquirySubject").value.trim();
+    const messageValue = document.getElementById("inquiryMessage").value.trim();
+
+    let valid = true;
+
+    if (!nameValue) {
+      setFieldError("inquiryName", "Name is required.");
+      valid = false;
+    } else {
+      setFieldError("inquiryName", "");
+    }
+
+    if (!emailValue) {
+      setFieldError("inquiryEmail", "Email is required.");
+      valid = false;
+    } else if (!validateEmail(emailValue)) {
+      setFieldError("inquiryEmail", "Please enter a valid email address.");
+      valid = false;
+    } else {
+      setFieldError("inquiryEmail", "");
+    }
+
+    if (!subjectValue) {
+      setFieldError("inquirySubject", "Subject is required.");
+      valid = false;
+    } else {
+      setFieldError("inquirySubject", "");
+    }
+
+    if (!messageValue) {
+      setFieldError("inquiryMessage", "Message is required.");
+      valid = false;
+    } else {
+      setFieldError("inquiryMessage", "");
+    }
+
+    if (valid) {
+      alert("Your inquiry has been sent successfully!");
+      inquiryForm.reset();
+    }
+  });
+}
